@@ -1,60 +1,223 @@
-
+/* index.css */
 header {}
+
 header .non {
     display: flex;
     flex-flow: row nowrap;
-    width:100%;
+    width: 100%;
     align-items: center;
     text-align: center;
-    height:80px;
+    height: 80px;
 }
+
 header .non .logo {
-    margin:0 20px;
+    margin: 0 20px;
 }
+
 header .non .logo img {
-    width:50px;
-    height:60px;
+    width: 50px;
+    height: 60px;
 }
+
 header .non .category_1 {
     display: flex;
     flex-flow: row nowrap;
-    margin:20px;
-    gap:20px;
-    color:#222;
+    margin: 20px;
+    gap: 20px;
+    color: #222;
     transition: color 0.2s;
 }
+
 header .non .category_1 a.active,
 header .non .category_1 a:hover {
     color: #7a7a7a;
 }
+
 header .non .category_1 .menu_1 {}
+
 header .non .category_1 .menu_1 img {
-    width:30px;
-    height:15px;
+    width: 30px;
+    height: 15px;
 }
+
 header .non .use_c {
     display: flex;
     align-items: center;
-    gap:20px;
+    gap: 20px;
     text-align: center;
     margin-left: auto;
 }
+
 header .non .use_c a.active,
 header .non .use_c a:hover {
     color: #7a7a7a;
 }
+
 header .non .use_c input {
-    background-color:#F2F2F2;
-    width:200px;
-    height:35px;
-    margin-left:10px;
+    background-color: #F2F2F2;
+    width: 200px;
+    height: 35px;
+    margin-left: 10px;
 }
+
 header .non .use_c .search img {
     position: absolute;
-    right:25px;
-    top:33px;
-    width:16px;
-    height:16px;
+    right: 25px;
+    top: 33px;
+    width: 16px;
+    height: 16px;
+}
+
+header .full_menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 메뉴 활성화 상태 및 배경 이미지 처리 */
+header .full_menu_overlay.active {
+    opacity: 1;
+    visibility: visible;
+    background-image: url(../imges/banner_img_list/category_menu_bg/crg_menu_bg\(bf\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 내부 컨테이너 */
+header .full_menu_inner {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+/* 닫기 버튼 (X) */
+header .btn_close {
+    position: fixed; /* absolute 대신 fixed를 사용하여 화면 화면 전체 기준으로 고정 */
+    top: 40px;       /* 위쪽 여백 (원하는 만큼 조절 가능) */
+    left: 50px;      /* 왼쪽 여백 (원하는 만큼 조절 가능) */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10000;  /* 다른 요소보다 상위에 보이도록 설정 */
+}
+
+/* 좌우 분할 컨텐츠 영역 */
+header .full_menu_content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* 왼쪽 메뉴 영역 전체 */
+header .menu_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 140px; /* 닫기 버튼 위치 고려 및 가로 정렬 맞춤 */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* 1. MEN / WOMEN 서브 탭 */
+header .sub_tabs {
+    display: flex;
+    gap: 30px;
+}
+
+header .sub_tabs a {
+    color: #777777;
+    font-size: 2em; /* 요청사항 반영 */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header .sub_tabs a.active,
+header .sub_tabs a:hover {
+    color: #ffffff;
+}
+
+/* 2. 메인 카테고리 목록 (OUTER, TEE, SHIRT, PANTS, SHOES) */
+header .main_cate_list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+header .main_cate_list li {
+    margin-bottom: 22px;
+}
+
+header .main_cate_list li a {
+    color: #ffffff;
+    font-size: 3em; /* 요청사항 반영 */
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+header .main_cate_list li a:hover {
+    color: #aaaaaa;
+}
+
+/* 3. 하단 서비스 메뉴 (NOTICE ~ LOOKBOOK) */
+header .bottom_menu_list {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .bottom_menu_list li a {
+    color: #ffffff;
+    font-size: 14pt; /* 요청사항 반영 */
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+header .bottom_menu_list li a:hover {
+    color: #aaaaaa;
+}
+
+/* 오른쪽 포스터/이미지 영역 */
+header .menu_right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .poster_box {
+    width: 380px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header .poster_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 body {}
 /* ------------------------------- 메인배너목록 --------------------------------------- */
@@ -107,12 +270,14 @@ body .choice_l .c_contens_wrap .c_main {
     overflow: hidden;
     text-decoration: none;
     color: #fff;
+    background: #000;
 }
 body .choice_l .c_contens_wrap .c_main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.3s ease, filter 0.3s ease; /* 부드러운 전환 효과 */
 }
 /* 우측 Swiper 영역 */
 body .choice_l .c_contens_wrap .c_swiper_area {
@@ -188,7 +353,7 @@ body .choice_l .c_contens_wrap .c_swiper_area .swiper-nav-buttons button.swiper-
 body .new_l {
     max-width: 1570px;
     margin: 40px auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 body .new_l .new_munu {
     display: flex;
@@ -209,7 +374,7 @@ body .new_l .new_munu > p {
 body .new_l .n_swiper_area {
     width:100%;/* Swiper overflow 계산 오류 방지 */
     position: relative;
-    padding-bottom: 80px; /* 버튼 배치 공간 */
+    padding-bottom: 50px; /* 버튼 배치 공간 */
 }
 body .new_l .n_swiper_area .n_list.swiper {
     width: 100%;
@@ -254,7 +419,7 @@ body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .price {
 body .new_l .swiper-nav-buttons {
     position: absolute;
     bottom: 0px;
-    right: 10px;
+    right: 0px;
     display: flex;
     gap: 8px;
     z-index: 10;
@@ -312,6 +477,9 @@ body .collab_l .coll_wrap .coll_main img {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+body .choice_l .c_contens_wrap .c_main:hover img:hover {
+    opacity: 0.6;
 }
 /* 우측 Swiper 영역 */
 body .collab_l .coll_wrap .coll_swiper_area {
@@ -415,21 +583,35 @@ body .best_l .best_md {
     display: flex;
     text-align: start;
     margin-bottom: 20px;
+    gap: 20px; 
+    align-items: flex-start;
 }
-body .best_l .best_md img {
-    flex: 0 0 56%; /* 왼쪽 배너 폭 지정 */
+body .best_l .best_md .best_main_banner {
+    flex: 0 0 42%;
     display: block;
     border-radius: 15px;
     overflow: hidden;
-    margin-right:40px;
-    width:680px;
+    background: #000;
+}
+
+/* 이미지 설정 */
+body .best_l .best_md .best_main_banner img {
+    width: 100%;
+    height: 496px;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+body .best_l .best_md .best_main_banner:hover img {
+    opacity: 0.6;
 }
 body .best_l .best_md .best_right {
-    flex: 1;
-    min-width: 0; /* flex 자식의 overflow 방지 필수 설정 */
+    flex: 0 0 56%; 
+    width: 0;      /* Swiper overflow 및 flex 너비 계산 오류 방지 */
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap:20px
+    
 }
 body .best_l .best_md .best_right .best_c {
     margin-bottom: 20px;
@@ -438,6 +620,7 @@ body .best_l .best_md .best_right .best_c .best_title {
     display: flex;
     justify-content:center;
     gap: 40px;
+    margin-bottom:20px;
 }
 body .best_l .best_md .best_right .best_c .best_title li {
     font-size: 1.2em;
@@ -516,7 +699,7 @@ body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-sl
 body .sale_l {
     max-width: 1570px;
     margin: 40px auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 body .sale_l .sale_m {
     display: flex;
@@ -537,7 +720,7 @@ body .sale_l .sale_m > p {
 body .sale_l .sale_swiper_area {
     width:100%;/* Swiper overflow 계산 오류 방지 */
     position: relative;
-    padding-bottom: 80px; /* 버튼 배치 공간 */
+    padding-bottom: 50px; /* 버튼 배치 공간 */
 }
 body .sale_l .sale_swiper_area .sale_list.swiper {
     width: 100%;
@@ -596,7 +779,7 @@ body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .
 body .sale_l .swiper-nav-buttons {
     position: absolute;
     bottom: 0px;
-    right: 10px;
+    right: 0px;
     display: flex;
     gap: 8px;
     z-index: 10;
@@ -620,7 +803,7 @@ body .sale_l .swiper-nav-buttons button.swiper-button-disabled {
 body .look_l {
     max-width: 1570px;
     margin: 40px auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 body .look_l .look_m {
     display: flex;
@@ -641,7 +824,7 @@ body .look_l .look_m > p {
 body .look_l .look_swiper_area {
     width:100%;/* Swiper overflow 계산 오류 방지 */
     position: relative;
-    padding-bottom: 80px; /* 버튼 배치 공간 */
+    padding-bottom: 50px; /* 버튼 배치 공간 */
 }
 body .look_l .look_swiper_area .look_list.swiper {
     width: 100%;
@@ -686,6 +869,21 @@ body .look_l .look_swiper_area .swiper-nav-buttons button {
     justify-content: center;
 }
 body .look_l .look_swiper_area .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/* 공통 버튼 스타일 */
+.swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-nav-buttons button.swiper-button-disabled {
     opacity: 0.3;
     cursor: default;
 }

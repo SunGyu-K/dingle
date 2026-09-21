@@ -15,26 +15,77 @@
 </head>
 <header>
     <div class="non">
-        <a href="#" class="logo"><img src="./imges/logo/logo_bk.png" alt="logo"></a> <!-- 로고 -->
-        <ul class="category_1"> <!-- 좌측 카테고리 -->
-            <a href="#" class="menu_1"><img src="./imges/banner_img_list/icon_file/menu_icon.png" alt=""></a>
-            <li><a href="#">BRAND</a></li>
-            <li><a href="#">MENS</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">ACC</a></li>
-            <li><a href="#">SALE</a></li>
-            <li><a href="#">EVENT</a></li>
-            <li><a href="#">LOOKBOOK</a></li>
-        </ul>
-        <div class="use_c"> <!-- 회원기능 -->
-            <a href="#">로그인</a>
-            <a href="#">회원가입</a>
-            <a href="#">찜목록</a>
-            <a href="#">장바구니</a>
-            <input type="text" name="user_sh" id="user_sh" placeholder="search...">
-            <a href="#" class="search"><img src="./imges/banner_img_list/icon_file/search.png" alt=""></a>
+    <a href="#" class="logo"><img src="./imges/logo/logo_bk.png" alt="logo"></a> <!-- 로고 -->
+    
+    <ul class="category_1"> <!-- 좌측 카테고리 -->
+        <!-- 메뉴버튼 -->
+        <li>
+            <a href="#" class="menu_1" id="btn_all_menu">
+                <img src="./imges/banner_img_list/icon_file/menu_icon.png" alt="전체메뉴 열기">
+            </a>
+        </li>
+        <!-- 카테고리종류 -->
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">MENS</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">ACC</a></li>
+        <li><a href="#">SALE</a></li>
+        <li><a href="#">EVENT</a></li>
+        <li><a href="#">LOOKBOOK</a></li>
+    </ul>
+    
+    <div class="use_c"> <!-- 회원기능 -->
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">찜목록</a>
+        <a href="#">장바구니</a>
+        <input type="text" name="user_sh" id="user_sh" placeholder="search...">
+        <a href="#" class="search"><img src="./imges/banner_img_list/icon_file/search.png" alt=""></a>
+    </div>
+</div>
+<!-- 메뉴전체보기 오버레이 -->
+<div class="full_menu_overlay" id="full_menu_overlay">
+    <div class="full_menu_inner">
+        <!-- 닫기 버튼  -->
+        <button type="button" class="btn_close" id="btn_menu_close" aria-label="닫기">&times;</button>
+        
+        <div class="full_menu_content">
+            <!-- 왼쪽 메뉴 영역 -->
+            <div class="menu_left">
+                <!-- 전체보기 카테고리 (MEN / WOMEN) -->
+                <div class="sub_tabs">
+                    <a href="#" class="active">MEN</a>
+                    <a href="#">WOMEN</a>
+                </div>
+                
+                <!-- 메인 카테고리 목록 -->
+                <ul class="main_cate_list">
+                    <li><a href="#">OUTER</a></li>
+                    <li><a href="#">TEE</a></li>
+                    <li><a href="#">SHIRT</a></li>
+                    <li><a href="#">PANTS</a></li>
+                    <li><a href="#">SHOES</a></li>
+                </ul>
+                
+                <!-- 하단 서비스 메뉴 -->
+                <ul class="bottom_menu_list">
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">REVIEW</a></li>
+                    <li><a href="#">LOOKBOOK</a></li>
+                </ul>
+            </div>
+            
+            <!-- 오른쪽 포스터/이미지 영역 -->
+            <div class="menu_right">
+                <div class="poster_box">
+                    <img src="./imges/banner_img_list/category_img/page_1.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
+</div>
 </header>
 <body>
     <div class="main_b swiper">
@@ -253,7 +304,7 @@
             <a href="#">전체보기</a>
         </div>
         <div class="best_md">
-            <a href="#" class="best_img"><img src="./imges/banner_img_list/bast_banner/bast_m_imgbf.jpg" alt=""></a>
+            <a href="#" class="best_main_banner"><img src="./imges/banner_img_list/bast_banner/bast_m_imgbf2.png" alt=""></a>
             <div class="best_right">
                 <div class="best_c">
                     <ul class="best_title">
@@ -281,7 +332,7 @@
                                 <p class="price">76,000원</p>
                             </div>
                             <div class="swiper-slide">
-                                <div class="img_box"><img src="./imges/banner_img_list/item_list/item/list18.png" alt=""></div>
+                                <div class="img_box"><img src="./imges/banner_img_list/item_list/item/list20.png" alt=""></div>
                                 <p class="title_en">Custom Earth Shorts</p>
                                 <p class="title_ko">커스텀 어스 반바지</p>
                                 <p class="price">46,000원</p>
