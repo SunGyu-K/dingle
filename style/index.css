@@ -1,0 +1,819 @@
+
+header {}
+header .non {
+    display: flex;
+    flex-flow: row nowrap;
+    width:100%;
+    align-items: center;
+    text-align: center;
+    height:80px;
+}
+header .non .logo {
+    margin:0 20px;
+}
+header .non .logo img {
+    width:50px;
+    height:60px;
+}
+header .non .category_1 {
+    display: flex;
+    flex-flow: row nowrap;
+    margin:20px;
+    gap:20px;
+    color:#222;
+    transition: color 0.2s;
+}
+header .non .category_1 a.active,
+header .non .category_1 a:hover {
+    color: #7a7a7a;
+}
+header .non .category_1 .menu_1 {}
+header .non .category_1 .menu_1 img {
+    width:30px;
+    height:15px;
+}
+header .non .use_c {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    text-align: center;
+    margin-left: auto;
+}
+header .non .use_c a.active,
+header .non .use_c a:hover {
+    color: #7a7a7a;
+}
+header .non .use_c input {
+    background-color:#F2F2F2;
+    width:200px;
+    height:35px;
+    margin-left:10px;
+}
+header .non .use_c .search img {
+    position: absolute;
+    right:25px;
+    top:33px;
+    width:16px;
+    height:16px;
+}
+body {}
+/* ------------------------------- 메인배너목록 --------------------------------------- */
+body .main_b.swiper{}
+body .main_b.swipe .swiper-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+body .main_b.swipe .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* ------------------------------- 서브배너목록 --------------------------------------- */
+body .sub_banr {
+    display: flex;
+}
+/* ------------------------------- 초이스상품목록 --------------------------------------*/
+body .choice_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+body .choice_l .c_munu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .choice_l .c_munu > h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .choice_l .c_munu > p {
+    font-size:1em;
+    text-decoration: none;
+}
+body .choice_l .c_contens_wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* 좌측 배너 */
+body .choice_l .c_contens_wrap .c_main {
+    position: relative;
+    flex: 0 0 42%;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+}
+body .choice_l .c_contens_wrap .c_main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* 우측 Swiper 영역 */
+body .choice_l .c_contens_wrap .c_swiper_area {
+    flex: 0 0 56%;
+    width: 0; /* Swiper overflow 계산 오류 방지 */
+    position: relative;
+    padding-bottom: 50px; /* 버튼 배치 공간 */
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list .swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 슬라이드 아이템 상품리스트 */
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide .title_en {
+    font-size: 0.875em;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide .title_ko {
+    font-size: 0.875em;
+    color: #888;
+    margin-bottom: 8px;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .c_list.swiper .swiper-slide .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #111;
+}
+
+/* 네비게이션 버튼 (우측 하단) */
+body .choice_l .c_contens_wrap .c_swiper_area .swiper-nav-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .choice_l .c_contens_wrap .c_swiper_area .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/* -------------------------------------------------------------- 신규상품목록 ------------------------------------------------------------ */
+body .new_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+body .new_l .new_munu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .new_l .new_munu > h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .new_l .new_munu > p {
+    font-size:1em;
+    text-decoration: none;
+}
+
+/* 신규상품 전체 Swiper 영역 */
+body .new_l .n_swiper_area {
+    width:100%;/* Swiper overflow 계산 오류 방지 */
+    position: relative;
+    padding-bottom: 80px; /* 버튼 배치 공간 */
+}
+body .new_l .n_swiper_area .n_list.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 슬라이드 아이템 상품리스트 */
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .title_en {
+    font-size: 0.875em;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .title_ko {
+    font-size: 0.875em;
+    color: #888;
+    margin-bottom: 8px;
+}
+body .new_l .n_swiper_area .n_list.swiper .swiper-wrapper .swiper-slide .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #111;
+}
+/* 네비게이션 버튼 (우측 하단) */
+body .new_l .swiper-nav-buttons {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+body .new_l .swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .new_l .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/*-------------------------------------------------------- 콜라보상품목록 ----------------------------------------------------- */
+body .collab_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+body .collab_l .coll_m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .collab_l .coll_m > h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .collab_l .coll_m > p {
+    font-size:1em;
+    text-decoration: none;
+}
+body .collab_l .coll_wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+/* 좌측 배너 (추후 영상배너로 변경) */
+body .collab_l .coll_wrap .coll_main {
+    position: relative;
+    flex: 0 0 42%;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+}
+body .collab_l .coll_wrap .coll_main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* 우측 Swiper 영역 */
+body .collab_l .coll_wrap .coll_swiper_area {
+    flex: 0 0 56%;
+    width: 0; /* Swiper overflow 계산 오류 방지 */
+    position: relative;
+    padding-bottom: 50px; /* 버튼 배치 공간 */
+}
+
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+/* 슬라이드 아이템 상품리스트 */
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide .title_en {
+    font-size: 0.875em;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide .title_ko {
+    font-size: 0.875em;
+    color: #888;
+    margin-bottom: 8px;
+}
+body .collab_l .coll_wrap .coll_swiper_area .coll_list.swiper .swiper-slide .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #111;
+}
+/* 네비게이션 버튼 (우측 하단) */
+body .collab_l .coll_wrap .coll_swiper_area .swiper-nav-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+body .collab_l .coll_wrap .coll_swiper_area .swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .collab_l .coll_wrap .coll_swiper_area .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/*---------------------------------------------- 세일띠배너 목록 ---------------------------------------------- */
+body .sidebar_1 {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    display: block;
+}
+/* ---------------------------------------------- 베스트상품 목록 ---------------------------------------------- */
+body .best_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+body .best_l .best_m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .best_l .best_m h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .best_l .best_m p {
+    font-size:1em;
+    text-decoration: none;
+}
+body .best_l .best_md {
+    display: flex;
+    text-align: start;
+    margin-bottom: 20px;
+}
+body .best_l .best_md img {
+    flex: 0 0 56%; /* 왼쪽 배너 폭 지정 */
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right:40px;
+    width:680px;
+}
+body .best_l .best_md .best_right {
+    flex: 1;
+    min-width: 0; /* flex 자식의 overflow 방지 필수 설정 */
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+body .best_l .best_md .best_right .best_c {
+    margin-bottom: 20px;
+}
+body .best_l .best_md .best_right .best_c .best_title {
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+}
+body .best_l .best_md .best_right .best_c .best_title li {
+    font-size: 1.2em;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    color:#222;
+    transition: color 0.2s;
+}
+.best_title li a.active,
+.best_title li a:hover {
+    color: #7a7a7a;
+}
+/*  우측 Swiper 영역 */
+body .best_l .best_md .best_right .best_swiper_area {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 슬라이드 아이템 상품리스트  */
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide .title_en {
+    font-size: 0.875em;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide .title_ko {
+    font-size: 0.875em;
+    color: #888;
+    margin-bottom: 8px;
+}
+body .best_l .best_md .best_right .best_swiper_area .best_list.swiper .swiper-slide .price {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #111;
+}
+
+/* ---------------------------------------------- 하단 버튼 위치 지정 추가 ---------------------------------------------- */
+.swiper-nav-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+}
+.swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+/* ---------------------------------------------- 세일상품목록 ---------------------------------------------- */
+body .sale_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+body .sale_l .sale_m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .sale_l .sale_m > h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .sale_l .sale_m > p {
+    font-size:1em;
+    text-decoration: none;
+}
+
+/* 신규상품 전체 Swiper 영역  */
+body .sale_l .sale_swiper_area {
+    width:100%;/* Swiper overflow 계산 오류 방지 */
+    position: relative;
+    padding-bottom: 80px; /* 버튼 배치 공간 */
+}
+body .sale_l .sale_swiper_area .sale_list.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+/* 슬라이드 아이템 상품리스트 */
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .title_en {
+    font-size: 0.875em;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .title_ko {
+    font-size: 0.875em;
+    color: #888;
+    margin-bottom: 8px;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .price_list {
+    gap:10px;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .slae_n {
+    color:#ff0000;
+    margin-right:5px;
+    font-size:0.7em;
+    font-weight:700;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000;
+    margin-right:5px;
+}
+body .sale_l .sale_swiper_area .sale_list.swiper .swiper-wrapper .swiper-slide .price_s {
+    color: #888;
+    text-decoration: line-through;
+    font-size:0.8em;
+}
+/* ---------------------------------------------- 네비게이션 버튼 (우측 하단) ----------------------------------------------*/
+body .sale_l .swiper-nav-buttons {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+body .sale_l .swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .sale_l .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ---------------------------------------------- 룩북목록 ---------------------------------------------- */
+body .look_l {
+    max-width: 1570px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+body .look_l .look_m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+body .look_l .look_m > h3 {
+    font-size:2em;
+    font-weight: 600;
+}
+body .look_l .look_m > p {
+    font-size:1em;
+    text-decoration: none;
+}
+
+/*---------------------------------------------- 신규상품 전체 Swiper 영역 -------------------------------------*/
+body .look_l .look_swiper_area {
+    width:100%;/* Swiper overflow 계산 오류 방지 */
+    position: relative;
+    padding-bottom: 80px; /* 버튼 배치 공간 */
+}
+body .look_l .look_swiper_area .look_list.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*---------------------------- 슬라이드 아이템 상품리스트 ------------------------------*/
+body .look_l .look_swiper_area .look_list.swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+body .look_l .look_swiper_area .look_list.swiper .swiper-wrapper .swiper-slide .img_box {
+    width: 100%;
+    aspect-ratio: 6 / 8;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #f4f4f4;
+}
+body .look_l .look_swiper_area .look_list.swiper .swiper-wrapper .swiper-slide .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 네비게이션 버튼 (우측 하단) */
+body .look_l .look_swiper_area .swiper-nav-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+body .look_l .look_swiper_area .swiper-nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .look_l .look_swiper_area .swiper-nav-buttons button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+/* 브랜드스토리 라인 */
+body .brand_story {
+    position: relative;
+    width: 100vw;/* 화면 전체 너비 */
+    left: 50%;
+    transform: translateX(-50%); /* 부모 여백을 무시하고 화면 중앙 기준으로 꽉 채움 */
+}
+body .brand_story .brand_img {
+    width: 100%;
+    display: block;
+    height: auto;
+    display: block;
+}
+body .brand_story .btn-about {
+    position: absolute;
+    bottom: 30px;
+    right: 360px;
+    padding: 10px 40px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+body .brand_story .btn-about:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* ------------------------------------------- 푸터 ------------------------------------------ */
+footer {
+    width: 100%;
+    padding: 50px 300px;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+footer h3, footer h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+footer h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+/* 푸터 컨텐츠 목록 */
+footer .f_col1 {
+    flex: 1.5;
+}
+footer .f_col1 .info_line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    margin-bottom:10px;
+}
+footer .email_list {
+    margin-bottom:10px;
+}
+footer .f_col1 .divider {
+    color: #ccc;
+    font-size: 12px;
+}
+footer .f_col1 .btn-business {
+    color: #333;
+    text-decoration: none;
+}
+footer .f_col1 .policy_l {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    font-weight: 700;
+}
+footer .f_col2, .f_col3 {
+    flex: 0.8;
+    padding-top: 50px;
+}
+
+footer .f_col2 ul li, .f_col3 ul li {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 14px;
+}
+footer .f_col4 {
+    flex: 1.2;
+    padding-top: 50px;
+}
+
+footer .f_col4 p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.5;
+}
+footer .f_col5 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .f_col5 .f_icon {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+footer .f_col5 .f_icon img {
+    width: 36px;
+    height: 36px;
+    border-radius:12px;
+    display: block;
+}
+footer .f_col5 .work_info {
+    font-size: 13px;
+}
+footer .f_col5 .off_day {
+    margin-top: 15px;
+    font-weight: 500;
+}
