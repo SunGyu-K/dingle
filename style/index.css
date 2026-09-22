@@ -236,6 +236,16 @@ body .main_b.swipe .swiper-wrapper .swiper-slide {
 body .sub_banr {
     display: flex;
 }
+body .sub_banr a {
+    height:200px;
+    background: #000;
+}
+body .sub_banr a img {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+body .sub_banr a img:hover {
+    opacity:0.6;
+}
 /* ------------------------------- 초이스상품목록 --------------------------------------*/
 body .choice_l {
     max-width: 1570px;
@@ -589,6 +599,7 @@ body .best_l .best_md {
 body .best_l .best_md .best_main_banner {
     flex: 0 0 42%;
     display: block;
+    height:496px;
     border-radius: 15px;
     overflow: hidden;
     background: #000;
@@ -597,7 +608,7 @@ body .best_l .best_md .best_main_banner {
 /* 이미지 설정 */
 body .best_l .best_md .best_main_banner img {
     width: 100%;
-    height: 496px;
+    height: 500px;
     display: block;
     object-fit: cover;
     transition: opacity 0.3s ease;
