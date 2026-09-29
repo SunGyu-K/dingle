@@ -1,10 +1,18 @@
 /* index.css */
-header {}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 콘텐츠 위로 올라오도록 높은 z-index 지정 */
+    background-color: #ffffff;
+}
 
 header .non {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     height: 80px;
@@ -219,7 +227,9 @@ header .poster_box img {
     object-fit: cover;
     display: block;
 }
-body {}
+body {
+    padding-top: 80px;
+}
 /* ------------------------------- 메인배너목록 --------------------------------------- */
 body .main_b.swiper{}
 body .main_b.swipe .swiper-wrapper {
@@ -235,6 +245,7 @@ body .main_b.swipe .swiper-wrapper .swiper-slide {
 /* ------------------------------- 서브배너목록 --------------------------------------- */
 body .sub_banr {
     display: flex;
+    opacity:1;
 }
 /* ------------------------------- 초이스상품목록 --------------------------------------*/
 body .choice_l {
